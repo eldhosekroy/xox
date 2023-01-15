@@ -139,6 +139,7 @@ if(g<3){
     if(g==h){
         if(h==i){
         printf("%d   win\n\n",g);
+        flag=1;
         }
     }
 }
@@ -147,6 +148,7 @@ if(g<3){
     if(a==d){
         if(d==g){
         printf("%d   win\n\n",a);
+        flag=1;
         }
     }
 }
@@ -154,6 +156,7 @@ if(b<3){
     if(b==e){
         if(e==h){
         printf("%d   win\n\n",b);
+        flag=1;
         }
     }
 }
@@ -161,6 +164,7 @@ if(c<3){
     if(c==f){
         if(f==i){
         printf("%d   win\n\n",c);
+        flag=1;
         }
     }
 }
@@ -170,6 +174,7 @@ if(a<3){
     if(a==e){
         if(e==i){
         printf("%d   win\n\n",a);
+        flag=1;
         }
     }
 }
@@ -177,6 +182,7 @@ if(c<3){
     if(c==e){
         if(e==g){
         printf("%d   win\n\n",c);
+        flag=1;
         }
     }
 }
@@ -195,12 +201,19 @@ int main(){
 
         xox();
         check();
+        if(flag==1){
+            break;
+        }
         userin();
         xox();
         check();
+        if(flag==1){
+            break;
+        }
         computer();
-        xox();
 
     }
+    if(flag==0){
     printf("No winner");
+    }
 }
